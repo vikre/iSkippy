@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "One way to itsLearning",
+  "description": "",
+  "version": "0.1.0",
+
+  "permissions": [
+    "activeTab"
+  ],
+  "browser_action": {
+    "name": "Skipp innsida.ntnu.no"
+  },
+  "permissions":[
+    "tabs","http://innsida.ntnu.no/*"
+  ],
+  "content_scripts": [ {
+    "js": [ "jQuery.js", "background.js" ],
+    "matches": [ "http://innsida.ntnu.no/*", "https://innsida.ntnu.no/*"],
+    "css" : ["page.css"]
+  }]
+}
